@@ -1,0 +1,69 @@
+<!-- ============================================================
+     header.html — Site-Header mit Navigation
+     ============================================================ -->
+<header class="site-header">
+  <div class="container">
+    <div class="site-header__inner">
+
+      <!-- Logo -->
+      <a href="/" class="site-logo" aria-label="Waschplatz-Experten — Startseite">
+        WASCHPLATZ&mdash;EXPERTEN
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <ul class="main-nav__list">
+          <li>
+            <a href="/raumloesungen/" class="main-nav__link">Raumlösungen</a>
+          </li>
+          <li>
+            <a href="/beratung-kauf/online-badplanung/" class="main-nav__link">So lösen wir das</a>
+          </li>
+          <li>
+            <a href="/sortiment/waschtisch-materialien/" class="main-nav__link">Design entdecken</a>
+          </li>
+          <li>
+            <a href="/beratung-kauf/" class="main-nav__link">Beratung</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CTA Desktop -->
+      <div class="header-cta">
+        <a href="/beratung-kauf/" class="btn btn-primary btn-sm">
+          Jetzt beraten lassen
+        </a>
+      </div>
+
+      <!-- Hamburger Mobile -->
+      <button
+        class="nav-toggle"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        id="nav-toggle"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<nav
+  class="mobile-menu"
+  id="mobile-menu"
+  aria-label="Mobile Navigation"
+  aria-hidden="true"
+>
+  <a href="/raumloesungen/" class="mobile-menu__link">Raumlösungen</a>
+  <a href="/beratung-kauf/online-badplanung/" class="mobile-menu__link">So lösen wir das</a>
+  <a href="/sortiment/waschtisch-materialien/" class="mobile-menu__link">Design entdecken</a>
+  <a href="/beratung-kauf/" class="mobile-menu__link">Beratung</a>
+  <div class="mobile-menu__cta">
+    <a href="/beratung-kauf/" class="btn btn-primary">Jetzt beraten lassen</a>
+  </div>
+</nav>

@@ -1,0 +1,41 @@
+<!-- ============================================================
+     head.html — <head>-Block Template
+     Platzhalter: {{PAGE_TITLE}}, {{PAGE_DESC}}, {{PAGE_CANONICAL}}, {{PAGE_CSS}}
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PAGE_TITLE}} — Waschplatz-Experten</title>
+<meta name="description" content="{{PAGE_DESC}}">
+<link rel="canonical" href="https://www.waschplatz-experten.com/{{PAGE_CANONICAL}}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{PAGE_TITLE}} — Waschplatz-Experten">
+<meta property="og:description" content="{{PAGE_DESC}}">
+<meta property="og:url" content="https://www.waschplatz-experten.com/{{PAGE_CANONICAL}}">
+<meta property="og:site_name" content="Waschplatz-Experten">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/nav.css">
+{{PAGE_CSS}}
+
+<!-- Strukturierte Daten -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Waschplatz-Experten",
+  "url": "https://www.waschplatz-experten.com",
+  "description": "Systemintegrator für Maß-Waschplätze. Individuelle Waschtische ab 17 cm Breite und 15 cm Tiefe. 100% Remote-Beratung.",
+  "areaServed": "DE",
+  "priceRange": "€€"
+}
+</script>

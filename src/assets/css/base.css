@@ -1,0 +1,238 @@
+/* ============================================================
+   base.css — Reset, Body, Typografie, Container
+   Lädt nach tokens.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   CSS RESET
+   ---------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  line-height: var(--font-body-line);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------
+   TYPOGRAFIE-HIERARCHIE
+   ---------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: var(--font-heading-tracking);
+  color: var(--color-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  margin-bottom: var(--space-lg);
+}
+
+h2 {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl));
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
+}
+
+h4 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  max-width: 68ch;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* ----------------------------------------------------------
+   CONTAINER
+   ---------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--container-pad-lg);
+    padding-right: var(--container-pad-lg);
+  }
+}
+
+/* ----------------------------------------------------------
+   SEKTIONS-ABSTAND
+   ---------------------------------------------------------- */
+
+.section-pad {
+  padding: var(--section-pad-mob);
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding: var(--section-pad);
+  }
+}
+
+.section-pad--sm {
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .section-pad--sm {
+    padding: 60px 0;
+  }
+}
+
+/* ----------------------------------------------------------
+   HINTERGRUNDVARIANTEN
+   ---------------------------------------------------------- */
+
+.bg-white  { background-color: var(--color-card); }
+.bg-light  { background-color: var(--color-bg); }
+.bg-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4 {
+  color: #ffffff;
+}
+
+/* ----------------------------------------------------------
+   HILFKLASSEN
+   ---------------------------------------------------------- */
+
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+
+.text-light   { color: var(--color-text-light); }
+.text-primary { color: var(--color-primary); }
+.text-accent  { color: var(--color-accent); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ----------------------------------------------------------
+   BREADCRUMB
+   ---------------------------------------------------------- */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  padding: var(--space-md) 0;
+}
+
+.breadcrumb a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition);
+}
+
+.breadcrumb a:hover {
+  text-decoration-color: var(--color-primary);
+}
+
+.breadcrumb__sep {
+  color: var(--color-card-border);
+}
